@@ -299,12 +299,12 @@ def selectnode(mode="sms"):
         check_for_updates()
         notifyen()
 
-        max_limit = {"sms": 500, "call": 15, "mail": 200}
+        max_limit = {"sms": 1000, "call": 100, "mail": 1000}
         cc, target = "", ""
         if mode in ["sms", "call"]:
             cc, target = get_phone_info()
             if cc != "91":
-                max_limit.update({"sms": 100})
+                max_limit.update({"sms": 1000})
         elif mode == "mail":
             target = get_mail_info()
         else:
@@ -316,7 +316,9 @@ def selectnode(mode="sms"):
                 message = ("Enter number of {type}".format(type=mode.upper()) +
                            " to send (Max {limit}): ".format(limit=limit))
                 count = int(input(mesgdcrt.CommandMessage(message)).strip())
-                if count > limit or count == 0:
+                if message=="fuck off":
+                	exit()
+                elif count > limit or count == 0:
                     mesgdcrt.WarningMessage("You have requested " + str(count)
                                             + " {type}".format(
                                                 type=mode.upper()))
@@ -439,3 +441,5 @@ if __name__ == "__main__":
             mesgdcrt.WarningMessage("Received INTR call - Exiting...")
             sys.exit()
     sys.exit()
+def exit():
+	print("fuck off")
