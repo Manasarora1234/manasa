@@ -1,5 +1,3 @@
-#!/usr/bin/python
-# -*- coding: UTF-8 -*-
 
 import os
 import shutil
@@ -52,16 +50,7 @@ def clr():
 
 def bann_text():
     clr()
-    logo = """
-   ████████ █████                 ██
-   ▒▒▒██▒▒▒ ██▒▒██                ██
-      ██    ██  ██        ██   ██ ██
-      ██    █████▒  ████  ███ ███ █████
-      ██    ██▒▒██ ██  ██ ██▒█▒██ ██▒▒██
-      ██    ██  ██ ██  ██ ██ ▒ ██ ██  ██
-      ██    █████▒ ▒████▒ ██   ██ █████▒
-      ▒▒    ▒▒▒▒▒   ▒▒▒▒  ▒▒   ▒▒ ▒▒▒▒▒
-                                         """
+    logo = """   SMS BOMBER BY MANAS ARORA  """
     if ASCII_MODE:
         logo = ""
     version = "Version: "+__VERSION__
